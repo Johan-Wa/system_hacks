@@ -14,6 +14,7 @@ def change_kb():
 
     layout = layout_info[2]
     layout = layout[-3:-1]
+    print(layout)
     if layout == 'us':
         os.system('setxkbmap -layout es')
         os.system('setxkbmap -query')
@@ -22,4 +23,4 @@ def change_kb():
         os.system('setxkbmap -query')
     os.system(f'rm {path}la_temp.txt')
 
-    change_kb()
+change_kb()
